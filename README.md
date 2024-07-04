@@ -88,3 +88,7 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to keep our community appr
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
 
 © 2024 Jagoda11
+
+## Credits
+
+- Icons made by [Flat Icons](https://www.flaticon.com/free-icons/algorithm) from [Flaticon](https://www.flaticon.com)
