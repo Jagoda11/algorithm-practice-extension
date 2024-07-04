@@ -4,7 +4,7 @@
   "description": "chrome extension to practice algorithms",
   "scripts": {
     "start": "echo '🚀 Starting the app...' && npm run build && node dist/index.js",
-    "build": "echo '🔨 Building the app...' && tsc",
+    "build": "echo '🔨 Building the app...' && webpack --mode production",
     "test": "echo '🧪 Running tests...' && jest --config jest.config.cjs --coverage",
     "format": "echo '🖋️ Formatting code...' && prettier --write .",
     "lint": "echo '🧹 Linting code...' && eslint './**/*.{js,ts}' --ignore-path eslintignore",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.9",
@@ -51,7 +52,9 @@
     "nodemon": "^3.1.4",
     "prettier": "^3.3.2",
     "readline-sync": "^1.4.10",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
