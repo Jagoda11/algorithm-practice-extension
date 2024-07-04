@@ -4,24 +4,28 @@
   "description": "A Chrome extension to practice algorithms",
   "version": "1.0.0",
   "action": {
-    "default_popup": "public/popup.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "32": "icons/icon32.png",
-      "128": "icons/icon128.png"
-    }
+      "default_popup": "public/popup.html",
+      "default_icon": {
+          "16": "icons/icon16.png",
+          "32": "icons/icon32.png",
+          "128": "icons/icon128.png"
+      }
   },
   "background": {
-    "service_worker": "dist/background.js"
+      "service_worker": "dist/background.js"
   },
   "permissions": [
-    "storage",
-    "activeTab"
+      "storage",
+      "activeTab"
   ],
   "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["dist/content.js"]
-    }
+      {
+          "matches": [
+              "<all_urls>"
+          ],
+          "js": [
+              "dist/content.js"
+          ]
+      }
   ]
 }
