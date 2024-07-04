@@ -5,8 +5,27 @@
 ![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/algorithm-practice-extension/main?style=flat-square&color=blue)
 ![Build Status](https://github.com/Jagoda11/algorithm-practice-extension/actions/workflows/ci.yml/badge.svg?branch=main)
 
-includes :
+## What Does This Chrome Extension Do?
 
+The **Algorithm Practice Chrome Extension** is designed to help users practice and improve their algorithm skills directly within their browser. This extension includes a variety of algorithm problems that are commonly asked in technical interviews, particularly for positions at major tech companies like Google, Microsoft, Amazon, and more.
+
+### Features
+
+- **Algorithm Problems**: Presents a range of algorithm problems for users to solve.
+- **Solution Reveal**: Allows users to view the solution to each problem with a simple toggle button.
+
+#### How to Use
+
+1. **Browse Problems**: Open the extension to browse through a list of algorithm problems.
+2. **Solve and Learn**: Attempt to solve the problems on your own.
+3. **Reveal Solutions**: Click the "Show Solution" button to view the solution, which then toggles to "Hide Solution" for better control over your learning process.
+
+This extension is perfect for anyone looking to sharpen their algorithm skills and prepare for coding interviews in a convenient and engaging way.
+
+made with :
+
+- React ⚛️
+- Tailwind 🎨
 - Babel 🐵
 - TypeScript 🔵
 - ESLint 🛠️
