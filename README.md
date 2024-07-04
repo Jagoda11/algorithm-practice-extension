@@ -1,4 +1,4 @@
-# 🚀 Algorithm practice chrome extension
+# 🚀 Algorithm practice Chrome extension
 
 ![License](https://img.shields.io/github/license/Jagoda11/algorithm-practice-extension?style=flat-square&color=blue)
 ![Open Issues](https://img.shields.io/github/issues/Jagoda11/algorithm-practice-extension?style=flat-square&color=orange)
