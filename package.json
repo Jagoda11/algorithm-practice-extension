@@ -1,8 +1,8 @@
 {
-  "name": "my-template-project",
+  "name": "algorithm-practice-extension",
   "version": "1.0.0",
-  "description": "A template for TypeScript/JavaScript projects",
-  "main": "src/index.js",
+  "description": "chrome extension to practice algorithms",
+
   "scripts": {
     "start": "echo '🚀 Starting the app...' && npm run build && node dist/index.js",
     "build": "echo '🔨 Building the app...' && tsc",
@@ -11,7 +11,6 @@
     "lint": "echo '🧹 Linting code...' && eslint './**/*.{js,ts}' --ignore-path eslintignore",
     "lint:root": "echo '🧹 Linting root code...' && eslint './**/*.{js,ts}' --ignore-pattern 'frontend/' --ignore-pattern 'backend/'",
     "lint:frontend": "echo '🧹 Linting frontend code...' && eslint './frontend/**/*.{js,ts}'",
-    "lint:backend": "echo '🧹 Linting backend code...' && eslint './backend/**/*.{js,ts}'",
     "precommit": "echo '🔒 Precommit: Linting and testing code...' && npm run lint && npm test",
     "pretest": "echo '🔎 Pretest: Linting code...' && npm run lint",
     "watch": "echo '👀 Watching files...' && jest --watch",
@@ -21,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/my-template-project.git"
+    "url": "git+https://github.com/Jagoda11/algorithm-practice-extension"
   },
   "keywords": [],
-  "author": "Your Name",
-  "license": "MIT",
+  "author": "Jagoda11",
+  "license": "Proprietary",
   "bugs": {
-    "url": "https://github.com/yourusername/my-template-project/issues"
+    "url": "https://github.com/Jagoda11/algorithm-practice-extension/issues"
   },
-  "homepage": "https://github.com/yourusername/my-template-project#readme",
+  "homepage": "https://github.com/Jagoda11/algorithm-practice-extension#readme",
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
