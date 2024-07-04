@@ -12,7 +12,6 @@
     "lint:root": "echo '🧹 Linting root code...' && eslint './**/*.{js,ts}' --ignore-pattern 'frontend/' --ignore-pattern 'backend/'",
     "lint:frontend": "echo '🧹 Linting frontend code...' && eslint './frontend/**/*.{js,ts}'",
     "lint:backend": "echo '🧹 Linting backend code...' && eslint './backend/**/*.{js,ts}'",
-    "setup-eslint": "echo '🔨 Starting setup...' && ts-node setup-eslint.ts && echo '🎉 Setup completed!'",
     "precommit": "echo '🔒 Precommit: Linting and testing code...' && npm run lint && npm test",
     "pretest": "echo '🔎 Pretest: Linting code...' && npm run lint",
     "watch": "echo '👀 Watching files...' && jest --watch",
@@ -37,6 +36,10 @@
     "@babel/preset-typescript": "^7.24.7",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-redux": "^7.1.33",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "babel-loader": "^9.1.3",
@@ -45,6 +48,8 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "husky": "^9.0.11",
     "jest": "^29.7.0",
     "nodemon": "^3.1.4",
@@ -53,6 +58,15 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "autoprefixer": "^10.4.19",
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "postcss": "^8.4.39",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.24.1",
+    "redux": "^5.0.1",
+    "tailwindcss": "^3.4.4"
   }
 }
