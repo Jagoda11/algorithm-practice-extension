@@ -37,6 +37,7 @@ This script will prompt you to choose a frontend framework (React ⚛️, Angula
 To remove the setup script and its references after the initial setup, you can run the following command in your terminal:
 
 ```bash
+
 ```
 
 > ⚠️ **Important:** After running the above command, make sure to update your `README.md` file to remove any scripts or references that are no longer needed. Also, remember to update the `CONTRIBUTING.md` file and any other files that contain a GitHub link to this project.
@@ -92,8 +93,6 @@ To use GitHub Codespaces:
 3. Click "+ New codespace".
 
 Your development environment is now set up and running in a Docker container in the cloud. All commands you run in the Codespaces terminal will be executed inside the container. Any changes you make to the project will be reflected in the container and vice versa.
-
-
 
 ## 💖 Support
 

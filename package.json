@@ -2,15 +2,12 @@
   "name": "algorithm-practice-extension",
   "version": "1.0.0",
   "description": "chrome extension to practice algorithms",
-
   "scripts": {
     "start": "echo '🚀 Starting the app...' && npm run build && node dist/index.js",
     "build": "echo '🔨 Building the app...' && tsc",
     "test": "echo '🧪 Running tests...' && jest --config jest.config.cjs --coverage",
     "format": "echo '🖋️ Formatting code...' && prettier --write .",
     "lint": "echo '🧹 Linting code...' && eslint './**/*.{js,ts}' --ignore-path eslintignore",
-    "lint:root": "echo '🧹 Linting root code...' && eslint './**/*.{js,ts}' --ignore-pattern 'frontend/' --ignore-pattern 'backend/'",
-    "lint:frontend": "echo '🧹 Linting frontend code...' && eslint './frontend/**/*.{js,ts}'",
     "precommit": "echo '🔒 Precommit: Linting and testing code...' && npm run lint && npm test",
     "pretest": "echo '🔎 Pretest: Linting code...' && npm run lint",
     "watch": "echo '👀 Watching files...' && jest --watch",
