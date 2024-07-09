@@ -1,7 +1,7 @@
 // src/problems/palindromePermutation.ts
 
 export const palindromePermutationProblem = {
-  id: 5,
+  id: 4,
   title: 'Palindrome Permutation',
   description:
     'Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters.',

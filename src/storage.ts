@@ -15,12 +15,12 @@ const problems: Problem[] = [
 ]
 
 export const initializeProgress = (): UserProgress => {
-  const activeProblems = problems.slice(0, 3).map((problem) => ({
+  const activeProblems = problems.slice(0, 6).map((problem) => ({
     ...problem,
     box: 1,
   }))
 
-  const queue = problems.slice(3)
+  const queue = problems.slice(6)
 
   const boxes = [
     { id: 1, problems: activeProblems, reviewInterval: 1 },
