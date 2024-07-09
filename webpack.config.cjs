@@ -5,6 +5,7 @@ module.exports = {
     background: './src/background.ts',
     content: './src/content.ts',
     popup: './src/popup.tsx',
+    index: './src/index.ts',
   },
   output: {
     filename: '[name].js',

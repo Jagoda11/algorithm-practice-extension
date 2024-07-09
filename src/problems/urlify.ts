@@ -1,5 +1,3 @@
-// src/problems/urlify.ts
-
 export const urlifyProblem = {
   id: 2,
   title: 'URLify',
@@ -25,7 +23,7 @@ export const urlify = (str: string, length: number): string => {
 };`,
 }
 
-export const urlify = (str: string, length: number): string => {
+export const urlify = (str: string): string => {
   const strArr = str.split('')
   let pointer = 0
   while (pointer < str.length) {

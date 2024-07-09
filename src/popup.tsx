@@ -1,20 +1,34 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import { Problem } from './types' // Import the type
-import { isUniqueProblem } from './problems/isUnique'
-import { urlifyProblem } from './problems/urlify'
-import { checkPermuteProblem } from './problems/checkPermute'
+import { Problem, UserProgress } from './types'
+import {
+  getUserProgress,
+  initializeProgress,
+  saveUserProgress,
+} from './storage'
 
 const App = () => {
   const [problems, setProblems] = useState<Problem[]>([])
   const [showSolution, setShowSolution] = useState<{ [key: number]: boolean }>(
     {},
   )
+  const [progress, setProgress] = useState<UserProgress | null>(null)
 
   useEffect(() => {
-    const loadedProblems = [isUniqueProblem, urlifyProblem, checkPermuteProblem]
-    setProblems(loadedProblems)
+    let userProgress = getUserProgress()
+    if (!userProgress) {
+      userProgress = initializeProgress()
+    }
+    setProgress(userProgress)
+    loadProblems(userProgress)
   }, [])
+
+  const loadProblems = (userProgress: UserProgress) => {
+    const dueProblems = userProgress.activeProblems.flatMap(
+      (box) => box.problems,
+    )
+    setProblems(dueProblems)
+  }
 
   const handleToggleSolution = (id: number) => {
     setShowSolution((prev) => ({ ...prev, [id]: !prev[id] }))

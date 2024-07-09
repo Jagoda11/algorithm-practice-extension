@@ -1,0 +1,59 @@
+import { Problem, UserProgress } from './types'
+import { isUniqueProblem } from './problems/isUnique'
+import { checkPermuteProblem } from './problems/checkPermute'
+import { urlifyProblem } from './problems/urlify'
+import { palindromePermutationProblem } from './problems/palindromePermutation'
+
+const STORAGE_KEY = 'userProgress'
+
+// Define the problems array
+const problems: Problem[] = [
+  isUniqueProblem,
+  checkPermuteProblem,
+  urlifyProblem,
+  palindromePermutationProblem,
+]
+
+export const initializeProgress = (): UserProgress => {
+  const activeProblems = problems.slice(0, 3).map((problem) => ({
+    ...problem,
+    box: 1,
+  }))
+
+  const queue = problems.slice(3)
+
+  const boxes = [
+    { id: 1, problems: activeProblems, reviewInterval: 1 },
+    { id: 2, problems: [], reviewInterval: 2 },
+    { id: 3, problems: [], reviewInterval: 4 },
+    { id: 4, problems: [], reviewInterval: 8 },
+    { id: 5, problems: [], reviewInterval: 16 },
+    { id: 6, problems: [], reviewInterval: 32 },
+  ]
+
+  const lastReviewed = boxes.reduce(
+    (acc, box) => {
+      acc[box.id] = new Date(0) // default to epoch time
+      return acc
+    },
+    {} as { [key: number]: Date },
+  )
+
+  const userProgress = {
+    activeProblems: boxes,
+    queue,
+    lastReviewed,
+    version: 1,
+  }
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(userProgress))
+  return userProgress
+}
+
+export const getUserProgress = (): UserProgress | null => {
+  const data = localStorage.getItem(STORAGE_KEY)
+  return data ? JSON.parse(data) : null
+}
+
+export const saveUserProgress = (userProgress: UserProgress): void => {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(userProgress))
+}

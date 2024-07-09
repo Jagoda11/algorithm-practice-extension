@@ -8,7 +8,7 @@ The Algorithm Practice Extension ("we", "our", "us") is committed to protecting 
 
 ## Information We Collect
 
-1. **Local Storage of User Settings and Progress**: 
+1. **Local Storage of User Settings and Progress**:
    - **User Settings and Preferences**: We collect and store user settings and preferences to provide a personalized experience. This includes:
      - Progress on algorithm problems
      - Algorithm preferences and selected problems
@@ -17,6 +17,7 @@ The Algorithm Practice Extension ("we", "our", "us") is committed to protecting 
 ## How We Use Your Information
 
 We use the information we collect to:
+
 - Store and manage user settings and progress locally within the browser.
 - Provide a personalized user experience.
 - Improve our extension based on user feedback and preferences.
