@@ -20,7 +20,11 @@ export const initializeProgress = (): UserProgress => {
     box: 1,
   }))
 
+  console.log('Active Problems:', activeProblems) // Log active problems
+
   const queue = problems.slice(6)
+
+  console.log('Queue:', queue)
 
   const boxes = [
     { id: 1, problems: activeProblems, reviewInterval: 1 },
@@ -51,7 +55,9 @@ export const initializeProgress = (): UserProgress => {
 
 export const getUserProgress = (): UserProgress | null => {
   const data = localStorage.getItem(STORAGE_KEY)
-  return data ? JSON.parse(data) : null
+  const progress = data ? JSON.parse(data) : null
+  console.log('Loaded User Progress:', progress) // Log loaded progress
+  return progress
 }
 
 export const saveUserProgress = (userProgress: UserProgress): void => {
