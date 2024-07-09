@@ -3,6 +3,8 @@ import { isUniqueProblem } from './problems/isUnique'
 import { checkPermuteProblem } from './problems/checkPermute'
 import { urlifyProblem } from './problems/urlify'
 import { palindromePermutationProblem } from './problems/palindromePermutation'
+import { oneWayProblem } from './problems/oneWay'
+import { stringCompressionProblem } from './problems/stringCompression'
 
 const STORAGE_KEY = 'userProgress'
 
@@ -12,6 +14,8 @@ const problems: Problem[] = [
   checkPermuteProblem,
   urlifyProblem,
   palindromePermutationProblem,
+  oneWayProblem,
+  stringCompressionProblem,
 ]
 
 export const initializeProgress = (): UserProgress => {
@@ -49,6 +53,8 @@ export const initializeProgress = (): UserProgress => {
     lastReviewed,
     version: 1,
   }
+  console.log('Initializing Progress:', userProgress) // Log initialization
+
   localStorage.setItem(STORAGE_KEY, JSON.stringify(userProgress))
   return userProgress
 }

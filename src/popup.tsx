@@ -27,6 +27,8 @@ const App = () => {
     const dueProblems = userProgress.activeProblems.flatMap(
       (box) => box.problems,
     )
+    console.log('Loaded Problems:', dueProblems) // Log loaded problems
+
     setProblems(dueProblems)
   }
 
