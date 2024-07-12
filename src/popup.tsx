@@ -28,8 +28,10 @@ const App = () => {
 
     userProgress.activeProblems.forEach((box) => {
       console.log(
+        '🐯🐯🐯🐯',
         `Box ID: ${box.id}, Review Interval: ${box.reviewInterval}, Problems:`,
         box.problems,
+        '🐯🐯🐯🐯',
       )
     })
 
