@@ -47,6 +47,31 @@ const App = () => {
     setShowSolution((prev) => ({ ...prev, [id]: !prev[id] }))
   }
 
+  const moveProblemToBox = (
+    problem: Problem,
+    targetBoxId: number,
+    userProgress: UserProgress,
+  ) => {
+    // Remove the problem from its current box
+    userProgress.activeProblems.forEach((box) => {
+      box.problems = box.problems.filter((p) => p.id !== problem.id)
+    })
+
+    // Update the box property and add the problem to the target box
+    problem.box = targetBoxId
+    const targetBox = userProgress.activeProblems.find(
+      (box) => box.id === targetBoxId,
+    )
+    if (targetBox) {
+      targetBox.problems.push(problem)
+    }
+
+    // Save the updated user progress
+    saveUserProgress(userProgress)
+    setProgress(userProgress)
+    loadProblems(userProgress)
+  }
+
   return (
     <div>
       <h1>
