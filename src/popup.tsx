@@ -27,7 +27,10 @@ const App = () => {
     console.log('🙈🙈🙈User Progress in loadProblems:', userProgress, '🙈🙈🙈') // Detailed log
 
     userProgress.activeProblems.forEach((box) => {
-      console.log(`Box ID: ${box.id}, Review Interval: ${box.reviewInterval}, Problems:`, box.problems)
+      console.log(
+        `Box ID: ${box.id}, Review Interval: ${box.reviewInterval}, Problems:`,
+        box.problems,
+      )
     })
 
     const dueProblems = userProgress.activeProblems.flatMap(
