@@ -24,10 +24,12 @@ const App = () => {
   }, [])
 
   const loadProblems = (userProgress: UserProgress) => {
+    console.log('🙈🙈🙈User Progress in loadProblems:', userProgress, '🙈🙈🙈') // Detailed log
+
     const dueProblems = userProgress.activeProblems.flatMap(
       (box) => box.problems,
     )
-    console.log('Loaded Problems:', dueProblems) // Log loaded problems
+    console.log('🐧🐧🐧Loaded Problems:', dueProblems, '🐧🐧') // Log loaded problems
 
     setProblems(dueProblems)
   }

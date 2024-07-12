@@ -24,7 +24,7 @@ export const initializeProgress = (): UserProgress => {
     box: 1,
   }))
 
-  console.log('Active Problems:', activeProblems) // Log active problems
+  console.log('🐰🐰🐰Active Problems:', activeProblems, '🐰🐰🐰') // Log active problems
 
   const queue = problems.slice(6)
 
@@ -38,6 +38,8 @@ export const initializeProgress = (): UserProgress => {
     { id: 5, problems: [], reviewInterval: 16 },
     { id: 6, problems: [], reviewInterval: 32 },
   ]
+
+  console.log('👻👻Boxes after initialization:', boxes, '👻👻') // Detailed log
 
   const lastReviewed = boxes.reduce(
     (acc, box) => {
@@ -53,7 +55,8 @@ export const initializeProgress = (): UserProgress => {
     lastReviewed,
     version: 1,
   }
-  console.log('Initializing Progress:', userProgress) // Log initialization
+  console.log('🥹🥹🥹🥹🥹Initialized User Progress:', userProgress, '🥹🥹🥹🥹') // Detailed log
+  // Log initialization
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(userProgress))
   return userProgress
@@ -62,7 +65,7 @@ export const initializeProgress = (): UserProgress => {
 export const getUserProgress = (): UserProgress | null => {
   const data = localStorage.getItem(STORAGE_KEY)
   const progress = data ? JSON.parse(data) : null
-  console.log('Loaded User Progress:', progress) // Log loaded progress
+  console.log('🐼🐼🐼Loaded User Progress:', progress, '🐼🐼🐼') // Log loaded progress
   return progress
 }
 
