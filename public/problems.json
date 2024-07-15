@@ -8,5 +8,25 @@
     "id": 2,
     "title": "Reverse Integer",
     "description": "Reverse digits of an integer."
+  },
+  {
+    "id": 3,
+    "title": "Is Unique",
+    "description": "Implement an algorithm to determine if a string has all unique characters."
+  },
+  {
+    "id": 4,
+    "title": "Check Permutation",
+    "description": "Given two strings, write a method to decide if one is a permutation of the other."
+  },
+  {
+    "id": 5,
+    "title": "URLify",
+    "description": "Write a method to replace all spaces in a string with '%20'."
+  },
+  {
+    "id": 6,
+    "title": "One Way",
+    "description": "There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away."
   }
 ]

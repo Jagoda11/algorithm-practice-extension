@@ -50,6 +50,8 @@ const App = () => {
   const handleMoveProblem = (problem: Problem, targetBoxId: number) => {
     if (progress) {
       moveProblemToBox(problem, targetBoxId, progress)
+      saveUserProgress(progress)
+
       setProgress({ ...progress }) // Update state to reflect changes
       loadProblems(progress) // Reload problems
       setProblems([...progress.activeProblems.flatMap((box) => box.problems)]) // Update problems state with the latest data
