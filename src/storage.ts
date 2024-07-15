@@ -19,7 +19,7 @@ const problems: Problem[] = [
 ]
 
 export const initializeProgress = (): UserProgress => {
-  const activeProblems = problems.slice(0, 6).map((problem, index) => ({
+  const activeProblems = problems.map((problem) => ({
     ...problem,
     box: 1,
   }))
