@@ -19,6 +19,7 @@ const problems: Problem[] = [
 ]
 
 export const initializeProgress = (): UserProgress => {
+  localStorage.removeItem('userProgress')
   const activeProblems = problems.map((problem) => ({
     ...problem,
     box: 1,

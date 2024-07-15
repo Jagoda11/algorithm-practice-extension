@@ -16,6 +16,7 @@ const App = () => {
   const [progress, setProgress] = useState<UserProgress | null>(null)
 
   useEffect(() => {
+    localStorage.removeItem('userProgress')
     let userProgress = getUserProgress()
     if (!userProgress) {
       userProgress = initializeProgress()
@@ -29,17 +30,20 @@ const App = () => {
 
     userProgress.activeProblems.forEach((box) => {
       console.log(
-        '🐯🐯🐯🐯',
-        `Box ID: ${box.id}, Review Interval: ${box.reviewInterval}, Problems:`,
-        box.problems,
-        '🐯🐯🐯🐯',
+        `🐢🐢🐢🐢🐢🐢Box ID: ${box.id}, Review Interval: ${box.reviewInterval}, Problems:🐢🐢🐢🐢`,
+        JSON.stringify(box.problems, null, 2),
       )
     })
 
     const dueProblems = userProgress.activeProblems.flatMap(
       (box) => box.problems,
     )
-    console.log('🐧🐧🐧Loaded Problems:', dueProblems, '🐧🐧') // Log loaded problems
+    console.log(
+      '🐧🐧🐧🐧Loaded Problems:',
+      JSON.stringify(dueProblems, null, 2),
+      '🐧🐧🐧🐧🐧🐧',
+    )
+    problems
 
     setProblems(dueProblems)
   }
