@@ -5,6 +5,13 @@ import { urlifyProblem } from './problems/urlify'
 import { palindromePermutationProblem } from './problems/palindromePermutation'
 import { oneWayProblem } from './problems/oneWay'
 import { stringCompressionProblem } from './problems/stringCompression'
+import { rotateMatrixProblem } from './problems/rotateMatrix'
+import { zeroMatrixProblem } from './problems/zeroMatrix'
+import { stringRotationProblem } from './problems/stringRotation'
+import { removeDuplicatesProblem } from './problems/removeDuplicates'
+import { returnKthToLastProblem } from './problems/returnKthToLast'
+import { deleteMiddleNodeProblem } from './problems/deleteMiddleNode'
+import { partitionProblem } from './problems/partition'
 
 const STORAGE_KEY = 'userProgress'
 
@@ -16,6 +23,13 @@ const problems: Problem[] = [
   palindromePermutationProblem,
   oneWayProblem,
   stringCompressionProblem,
+  rotateMatrixProblem,
+  zeroMatrixProblem,
+  stringRotationProblem,
+  removeDuplicatesProblem,
+  returnKthToLastProblem,
+  deleteMiddleNodeProblem,
+  partitionProblem,
 ]
 
 export const initializeProgress = (): UserProgress => {
