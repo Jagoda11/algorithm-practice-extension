@@ -22,6 +22,10 @@ The **Algorithm Practice Chrome Extension** is designed to help users practice a
 
 This extension is perfect for anyone looking to sharpen their algorithm skills and prepare for coding interviews in a convenient and engaging way.
 
+### Installation
+
+You can install the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/algorithm-practice-extens/hgbpcikpmnmcngopkojepmilakhajgjd).
+
 made with :
 
 - React ⚛️
