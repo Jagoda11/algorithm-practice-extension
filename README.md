@@ -100,8 +100,6 @@ Increment the version number in both files to reflect the new version.
 }
 ```
 
-### Upload to Chrome Web Store
-
 1. Go to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard) and log in with your Google account.
 2. Find your existing extension in the dashboard and click on it to edit.
 3. Click the "Package" button in the sidebar menu.
