@@ -50,6 +50,7 @@ import { blueEyedIslandProblem } from './problems/blueEyedIsland'
 import { apocalypseProblem } from './problems/apocalypse'
 import { eggDropProblem } from './problems/eggDrop'
 import { lockersProblem } from './problems/lockers'
+import { poisonProblem } from './problems/poison'
 
 const STORAGE_KEY = 'userProgress'
 
@@ -106,6 +107,7 @@ const problems: Problem[] = [
   apocalypseProblem,
   eggDropProblem,
   lockersProblem,
+  poisonProblem,
 ]
 
 export const initializeProgress = (): UserProgress => {
