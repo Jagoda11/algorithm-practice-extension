@@ -31,6 +31,25 @@ import { buildOrderProblem } from './problems/buildOrder'
 import { firstCommonAncestorProblem } from './problems/firstCommonAncestor'
 import { bstSequencesProblem } from './problems/bstSequences'
 import { checkSubtreeProblem } from './problems/checkSubtree'
+import { randomNodeProblem } from './problems/randomNode'
+import { pathsWithSumProblem } from './problems/pathsWithSum'
+import { bitInsertionProblem } from './problems/bitInsertion'
+import { binaryToStringProblem } from './problems/binaryToString'
+import { flipBitToWinProblem } from './problems/flipBitToWin'
+import { nextNumberProblem } from './problems/nextNumber'
+import { debuggerProblem } from './problems/debugger'
+import { conversionProblem } from './problems/conversion'
+import { pairwiseSwapProblem } from './problems/pairwiseSwap'
+import { drawLineProblem } from './problems/drawLine'
+import { heavyPillProblem } from './problems/heavyPill'
+import { basketballProblem } from './problems/basketball'
+import { dominosProblem } from './problems/dominos'
+import { antsOnTriangleProblem } from './problems/antsOnTriangle'
+import { jugsOfWaterProblem } from './problems/jugsOfWater'
+import { blueEyedIslandProblem } from './problems/blueEyedIsland'
+import { apocalypseProblem } from './problems/apocalypse'
+import { eggDropProblem } from './problems/eggDrop'
+import { lockersProblem } from './problems/lockers'
 
 const STORAGE_KEY = 'userProgress'
 
@@ -68,6 +87,25 @@ const problems: Problem[] = [
   firstCommonAncestorProblem,
   bstSequencesProblem,
   checkSubtreeProblem,
+  randomNodeProblem,
+  pathsWithSumProblem,
+  bitInsertionProblem,
+  binaryToStringProblem,
+  flipBitToWinProblem,
+  nextNumberProblem,
+  debuggerProblem,
+  conversionProblem,
+  pairwiseSwapProblem,
+  drawLineProblem,
+  heavyPillProblem,
+  basketballProblem,
+  dominosProblem,
+  antsOnTriangleProblem,
+  jugsOfWaterProblem,
+  blueEyedIslandProblem,
+  apocalypseProblem,
+  eggDropProblem,
+  lockersProblem,
 ]
 
 export const initializeProgress = (): UserProgress => {
@@ -102,7 +140,7 @@ export const initializeProgress = (): UserProgress => {
     {} as { [key: number]: Date },
   )
 
-  const userProgress = {
+  const userProgress: UserProgress = {
     activeProblems: boxes,
     queue,
     lastReviewed,
@@ -130,7 +168,7 @@ export const moveProblemToBox = (
   problem: Problem,
   targetBoxId: number,
   userProgress: UserProgress,
-) => {
+): void => {
   // Remove the problem from its current box
   userProgress.activeProblems.forEach((box) => {
     box.problems = box.problems.filter((p) => p.id !== problem.id)
