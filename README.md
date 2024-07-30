@@ -64,6 +64,52 @@ To run these scripts, use `npm run <script-name>`:
 - `debug`: 🐞 Starts the application in debug mode using `nodemon`.
 - `clean`: 🧽 Removes the `node_modules` directory and `package-lock.json` file.
 - `prepare`: 🐾 Sets up Husky for managing git hooks.
+- `create-zip`: 📦 Creates a ZIP file of the extension.
+- `package-extension`: 📦 Packages the extension by removing .DS_Store files and creating a ZIP file.
+
+## 🛠️ Testing Locally in Your Browser
+
+To test the extension locally in your browser, follow these steps:
+
+1. **Update `manifest.json` and `package.json`**: Ensure the version numbers are incremented.
+2. **Package the extension**:
+
+   ```bash
+   npm run package-extension
+   ```
+
+3. **Load the extension** locally in Chrome:
+   Open Chrome and go to `chrome://extensions/`
+   Enable "Developer mode" by toggling the switch in the upper-right corner.
+
+- Click the "Load unpacked" button.
+
+- Select the directory containing your extension files (not just the dist directory, but the entire project directory).
+
+## 📦 Uploading to the Chrome Web Store
+
+To upload your extension to the Chrome Web Store, follow these steps:
+
+### Update Version in `manifest.json` and `package.json`
+
+Increment the version number in both files to reflect the new version.
+
+```json
+{
+  "version": "2.0.0" // Example version number update
+}
+```
+
+### Upload to Chrome Web Store
+
+1. Go to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard) and log in with your Google account.
+2. Find your existing extension in the dashboard and click on it to edit.
+3. Click the "Package" button in the sidebar menu.
+4. Click "Upload New Package".
+5. Select the ZIP file created in step 2 and upload it.
+6. Submit the changes and wait for the review process to complete.
+
+By following these steps, you can successfully update and upload your web extension to the Chrome Web Store.
 
 ## 🤖 GitHub Actions Workflows
 
