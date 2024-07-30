@@ -12,6 +12,14 @@ import { removeDuplicatesProblem } from './problems/removeDuplicates'
 import { returnKthToLastProblem } from './problems/returnKthToLast'
 import { deleteMiddleNodeProblem } from './problems/deleteMiddleNode'
 import { partitionProblem } from './problems/partition'
+import { sumListsProblem } from './problems/sumLists'
+import { checkPalindromeListProblem } from './problems/checkPalindromeList'
+import { intersectionProblem } from './problems/intersection'
+import { loopDetectionProblem } from './problems/loopDetection'
+import { threeInOneProblem } from './problems/threeInOne'
+import { stackMinProblem } from './problems/stackMin'
+import { stackOfPlatesProblem } from './problems/stackOfPlates'
+import { queueViaStacksProblem } from './problems/queueViaStacks'
 
 const STORAGE_KEY = 'userProgress'
 
@@ -30,6 +38,14 @@ const problems: Problem[] = [
   returnKthToLastProblem,
   deleteMiddleNodeProblem,
   partitionProblem,
+  sumListsProblem,
+  checkPalindromeListProblem,
+  intersectionProblem,
+  loopDetectionProblem,
+  threeInOneProblem,
+  stackMinProblem,
+  stackOfPlatesProblem,
+  queueViaStacksProblem,
 ]
 
 export const initializeProgress = (): UserProgress => {
