@@ -20,6 +20,17 @@ import { threeInOneProblem } from './problems/threeInOne'
 import { stackMinProblem } from './problems/stackMin'
 import { stackOfPlatesProblem } from './problems/stackOfPlates'
 import { queueViaStacksProblem } from './problems/queueViaStacks'
+import { sortStackProblem } from './problems/sortStack'
+import { animalShelterProblem } from './problems/animalShelter'
+import { routeBetweenNodesProblem } from './problems/routeBetweenNodes'
+import { listOfDepthsProblem } from './problems/listOfDepths'
+import { checkBalancedProblem } from './problems/checkBalanced'
+import { validateBSTProblem } from './problems/validateBST'
+import { successorProblem } from './problems/successor'
+import { buildOrderProblem } from './problems/buildOrder'
+import { firstCommonAncestorProblem } from './problems/firstCommonAncestor'
+import { bstSequencesProblem } from './problems/bstSequences'
+import { checkSubtreeProblem } from './problems/checkSubtree'
 
 const STORAGE_KEY = 'userProgress'
 
@@ -46,6 +57,17 @@ const problems: Problem[] = [
   stackMinProblem,
   stackOfPlatesProblem,
   queueViaStacksProblem,
+  sortStackProblem,
+  animalShelterProblem,
+  routeBetweenNodesProblem,
+  listOfDepthsProblem,
+  checkBalancedProblem,
+  validateBSTProblem,
+  successorProblem,
+  buildOrderProblem,
+  firstCommonAncestorProblem,
+  bstSequencesProblem,
+  checkSubtreeProblem,
 ]
 
 export const initializeProgress = (): UserProgress => {
