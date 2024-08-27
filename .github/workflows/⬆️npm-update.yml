@@ -36,6 +36,12 @@ jobs:
       - name: 📦 Update dependencies with legacy peer deps
         run: npm update --legacy-peer-deps
 
+      - name: 🐶 Install Husky
+        run: npx husky install
+
+      - name: 🧹 Run ESLint
+        run: npm run lint
+
       - name: 🎭 Mask Debricked credentials
         run: |
           echo "::add-mask::${{ secrets.DEBRICKED_TOKEN }}"
