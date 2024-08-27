@@ -63,18 +63,17 @@ export const partition = (
     const next = head.next
     head.next = null
     if (head.value < x) {
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       beforeStart === null ? (beforeStart = head) : (beforeEnd!.next = head)
       beforeEnd = head
     } else {
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       afterStart === null ? (afterStart = head) : (afterEnd!.next = head)
       afterEnd = head
     }
     head = next
   }
 
-  // eslint-disable-next-line no-sequences
   return beforeStart === null
     ? afterStart
     : ((beforeEnd!.next = afterStart), beforeStart)
