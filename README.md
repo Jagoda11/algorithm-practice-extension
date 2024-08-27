@@ -4,6 +4,7 @@
 ![Open Issues](https://img.shields.io/github/issues/Jagoda11/algorithm-practice-extension?style=flat-square&color=orange)
 ![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/algorithm-practice-extension/main?style=flat-square&color=blue)
 ![Build Status](https://github.com/Jagoda11/algorithm-practice-extension/actions/workflows/.github/workflows/🚀ci.yml/badge.svg?branch=main)
+![Build Status](https://github.com/Jagoda11/algorithm-practice-extension/actions/workflows/⬆️npm-update.yml/badge.svg?branch=main)
 
 ## What Does This Chrome Extension Do?
 
@@ -120,6 +121,7 @@ This template includes several GitHub Actions workflows that automate various ta
 - `thank-contributors-on-issue-close.yml`: Thanks contributors when an issue they commented on is closed.
 - `welcome-new-pull-requests.yml`: Posts a welcome message on new pull requests.
 - `welcome.yml`: Posts a welcome message on new issues.
+- `npm-update.yml`: checks for new versions of the dependencies and updates package.json and package-lock.json
 
 These workflows use the `secrets.GITHUB_TOKEN` secret, which GitHub automatically creates for every repository. You can create a personal access token and add it as a secret in your repository. For more information, see [Creating and storing encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
