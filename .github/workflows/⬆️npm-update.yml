@@ -39,6 +39,9 @@ jobs:
       - name: 🐶 Install Husky
         run: npx husky install
 
+      - name: 🖋️ Format code
+        run: npm run format
+
       - name: 🧹 Run ESLint
         run: npm run lint
 
