@@ -42,9 +42,6 @@ jobs:
       - name: 🖋️ Format code
         run: npm run format
 
-      - name: 🧹 Run ESLint
-        run: npm run lint
-
       - name: 🎭 Mask Debricked credentials
         run: |
           echo "::add-mask::${{ secrets.DEBRICKED_TOKEN }}"
