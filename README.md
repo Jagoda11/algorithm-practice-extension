@@ -121,7 +121,7 @@ This template includes several GitHub Actions workflows that automate various ta
 - `thank-contributors-on-issue-close.yml`: Thanks contributors when an issue they commented on is closed.
 - `welcome-new-pull-requests.yml`: Posts a welcome message on new pull requests.
 - `welcome.yml`: Posts a welcome message on new issues.
-- `npm-update.yml`: checks for new versions of the dependencies and updates package.json and package-lock.json, scans with
+- `⬆️npm-update.yml`: checks for new versions of the dependencies and updates package.json and package-lock.json, scans with
 [Debricked](https://debricked.com/) for vulnerabilities before it pushes the changes.
 
 These workflows use the `secrets.GITHUB_TOKEN` secret, which GitHub automatically creates for every repository. You can create a personal access token and add it as a secret in your repository. For more information, see [Creating and storing encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
@@ -161,4 +161,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 
 ## Credits
 
-- Icons made by [Flat Icons](https://www.flaticon.com/free-icons/algorithm) from [Flaticon](https://www.flaticon.com)
+- Icons  made by [Flat Icons](https://www.flaticon.com/free-icons/algorithm) from [Flaticon](https://www.flaticon.com)
