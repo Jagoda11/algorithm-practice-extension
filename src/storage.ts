@@ -51,12 +51,24 @@ import { apocalypseProblem } from './problems/apocalypse'
 import { eggDropProblem } from './problems/eggDrop'
 import { lockersProblem } from './problems/lockers'
 import { poisonProblem } from './problems/poison'
+import { callCenterProblem } from './problems/callCenter'
+import { deckOfCardsProblem } from './problems/deckOfCards'
+import { jukeboxProblem } from './problems/jukebox'
+import { parkingLotProblem } from './problems/parkingLot'
+import { onlineBookReaderProblem } from './problems/onlineBookReader'
+import { jigsawProblem } from './problems/jigsaw'
 
 const STORAGE_KEY = 'userProgress'
 
 // Define the problems array
 const problems: Problem[] = [
   isUniqueProblem,
+  parkingLotProblem,
+  onlineBookReaderProblem,
+  jigsawProblem,
+  callCenterProblem,
+  deckOfCardsProblem,
+  jukeboxProblem,
   checkPermuteProblem,
   urlifyProblem,
   palindromePermutationProblem,
