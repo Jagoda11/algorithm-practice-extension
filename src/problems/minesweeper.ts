@@ -1,7 +1,5 @@
-// src/problems/minesweeper.ts
-
 export const minesweeperProblem = {
-  id: 23,
+  id: 30,
   title: 'Minesweeper',
   description:
     'Design and implement a text-based Minesweeper game. The game should display a grid of cells, some of which contain mines. The player can reveal cells and mark cells as containing mines. The game ends when all cells without mines have been revealed or a mine is revealed.',
