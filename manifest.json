@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Algorithm Practice Extension",
   "description": "A Chrome extension to practice algorithms",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "action": {
     "default_popup": "public/popup.html",
     "default_icon": {
