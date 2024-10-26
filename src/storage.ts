@@ -60,6 +60,7 @@ import { jigsawProblem } from './problems/jigsaw'
 import { minesweeperProblem } from './problems/minesweeper'
 import { inMemoryFileSystemProblem } from './problems/inMemoryFileSystem'
 import { hashTableProblem } from './problems/hashTable'
+import { tripleStepProblem } from './problems/tripleStep'
 
 const STORAGE_KEY = 'userProgress'
 
@@ -126,6 +127,7 @@ const problems: Problem[] = [
   minesweeperProblem,
   inMemoryFileSystemProblem,
   hashTableProblem,
+  tripleStepProblem,
 ]
 
 export const initializeProgress = (): UserProgress => {
