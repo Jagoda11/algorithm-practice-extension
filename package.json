@@ -1,6 +1,6 @@
 {
   "name": "algorithm-practice-extension",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "chrome extension to practice algorithms",
   "scripts": {
     "start": "echo '🚀 Starting the app...' && npm run build && node dist/index.js",
