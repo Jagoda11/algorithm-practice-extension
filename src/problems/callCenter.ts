@@ -137,7 +137,7 @@ class Employee {
     console.log(`Employee ${this.id} (${this.role}) has finished the call`)
   }
 }
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class CallCenter {
   respondents: Employee[]
   managers: Employee[]

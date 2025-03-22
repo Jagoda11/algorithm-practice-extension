@@ -18,11 +18,6 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.json$/,
-        type: 'javascript/auto',
-        use: 'json-loader',
-      },
     ],
   },
   resolve: {

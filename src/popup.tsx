@@ -16,51 +16,56 @@ const App = () => {
   const [progress, setProgress] = useState<UserProgress | null>(null)
 
   useEffect(() => {
-    localStorage.removeItem('userProgress')
     let userProgress = getUserProgress()
+
     if (!userProgress) {
       userProgress = initializeProgress()
+      localStorage.setItem('userProgress', JSON.stringify(userProgress)) // Save new progress
     }
+
     setProgress(userProgress)
     loadProblems(userProgress)
   }, [])
 
   const loadProblems = (userProgress: UserProgress) => {
-    console.log('🙈🙈🙈User Progress in loadProblems:', userProgress, '🙈🙈🙈') // Detailed log
+    try {
+      console.log('🙈 User Progress in loadProblems:', userProgress)
 
-    userProgress.activeProblems.forEach((box) => {
-      console.log(
-        `🐢🐢🐢🐢🐢🐢Box ID: ${box.id}, Review Interval: ${box.reviewInterval}, Problems:🐢🐢🐢🐢`,
-        JSON.stringify(box.problems, null, 2),
+      userProgress.activeProblems.forEach((box) => {
+        console.log(
+          `🐢 Box ID: ${box.id}, Review Interval: ${box.reviewInterval}, Problems:`,
+          JSON.stringify(box.problems, null, 2),
+        )
+      })
+
+      const dueProblems = userProgress.activeProblems.flatMap(
+        (box) => box.problems,
       )
-    })
 
-    const dueProblems = userProgress.activeProblems.flatMap(
-      (box) => box.problems,
-    )
-    console.log(
-      '🐧🐧🐧🐧Loaded Problems:',
-      JSON.stringify(dueProblems, null, 2),
-      '🐧🐧🐧🐧🐧🐧',
-    )
-    problems
+      console.log('🐧 Loaded Problems:', JSON.stringify(dueProblems, null, 2))
 
-    setProblems(dueProblems)
+      setProblems(dueProblems)
+    } catch (error) {
+      console.error('Error loading problems:', error)
+    }
   }
 
   const handleToggleSolution = (id: number) => {
     setShowSolution((prev) => ({ ...prev, [id]: !prev[id] }))
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMoveProblem = (problem: Problem, targetBoxId: number) => {
     if (progress) {
       moveProblemToBox(problem, targetBoxId, progress)
       saveUserProgress(progress)
 
-      setProgress({ ...progress }) // Update state to reflect changes
-      loadProblems(progress) // Reload problems
-      setProblems([...progress.activeProblems.flatMap((box) => box.problems)]) // Update problems state with the latest data
+      setProgress({ ...progress })
+      loadProblems(progress)
+      setProblems([...progress.activeProblems.flatMap((box) => box.problems)])
     }
   }
+
   return (
     <div>
       <h1>
