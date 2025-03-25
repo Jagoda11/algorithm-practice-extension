@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   entry: {
@@ -23,4 +23,7 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
-}
+  optimization: {
+    concatenateModules: false, // 👈 disables module concatenation
+  },
+};
