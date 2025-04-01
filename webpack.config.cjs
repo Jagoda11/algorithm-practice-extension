@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   entry: {
@@ -26,4 +26,4 @@ module.exports = {
   optimization: {
     concatenateModules: false, // 👈 disables module concatenation
   },
-};
+}
